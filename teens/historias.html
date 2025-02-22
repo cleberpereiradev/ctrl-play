@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctrl + play</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .container img {
+            width: 45%; /* Ajuste para garantir espaço igual */
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .container img:hover {
+            transform: scale(1.05);
+        }
+        #historia {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Escolha o personagem da História</h2>
+    <div class="container">
+        <img onclick="historiaGuerreiro()" src="imagens/guerreiro.webp" alt="Imagem de um grande guerreiro">
+        <img onclick="historiaMago()" src="imagens/mago.webp" alt="Imagem de um grande mago">
+    </div>
+    <p id="historia"></p>
+    
+    <script>
+        function historiaGuerreiro() {
+            document.getElementById("historia").innerHTML = "Jarvan IV, o príncipe de Demacia, cresceu treinando para liderar seu povo com honra e coragem. Empunhando sua lança lendária, ele enfrentou inúmeras batalhas para proteger sua terra e garantir a justiça no reino.";
+        }
+        
+        function historiaMago() {
+            document.getElementById("historia").innerHTML = "Gandalf, o Cinzento, um dos mais sábios magos da Terra Média, viajou por reinos distantes guiando heróis e lutando contra as forças das trevas. Com seu cajado poderoso e vasto conhecimento, ele inspirou reis e guerreiros na batalha contra o mal.";
+        }
+    </script>
+</body>
+</html>
